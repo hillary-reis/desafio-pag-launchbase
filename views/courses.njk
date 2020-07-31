@@ -2,7 +2,7 @@
 
 {% block head %}
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Cursos | {{ about.title }} </title>
+  <title>Cursos | Rocketseat </title>
 {% endblock %}
 
 {% block content %}
@@ -10,25 +10,14 @@
 
   <section class="courses">
     {% for item in items %}
-      <div class="course">
+      <div class="course" id="{{item.id}}">
         <div class="course-img"> <img src="{{ item.img }}" alt="{{ item.alt }}"> </div>
         <div class="info"> <p> {{ item.info }} </p> </div>
         <div class="price"> <p> {{ item.price }} </p> </div>
       </div>
     {% endfor %}
   </section>
-  
-  <div id="modal-overlay">
-    <div class="modal">
-      <div class="modal-img"> <img src=" " alt=" "> </div>
-      <div class="description">
-        <div class="modal-description"> <p> </p> </div>
-        <div class="modal-price"> <p> </p> </div>
-      </div>
-      <a class="close-modal"> <i class="material-icons">close</i> </a>
-    </div>
-
-  </div>
 
   <script src="script.js"></script>
+
 {% endblock %}
